@@ -1,0 +1,47 @@
+<body>
+  <div class="mat-elevation-z3">
+    <h1>Sign Up</h1>
+    <form [formGroup]="registerForm">
+      <mat-form-field appearance="outline">
+        <mat-label>email adress</mat-label>
+        <input
+          matInput
+          placeholder="enter your e-mail"
+          formControlName="email"
+        />
+        <mat-error *ngIf="email?.errors?.['required']"
+          >Email is required</mat-error
+        >
+        <mat-error *ngIf="email?.errors?.['email']"
+          >Invalid email format</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <input
+          matInput
+          placeholder="enter your password"
+          formControlName="password"
+          type="password"
+        />
+        <mat-error *ngIf="password?.errors?.['required']"
+          >Password is required</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>repeat password</mat-label>
+        <input
+          matInput
+          placeholder="enter your password again"
+          formControlName="repeatPass"
+          type="password"
+        />
+        <mat-error *ngIf="password?.errors?.['required']"
+          >Password is required</mat-error
+        >
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">Sign Up</button>
+    </form>
+  </div>
+</body>

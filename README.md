@@ -72,6 +72,102 @@ The first line will redirect you so you can fill your email and password and go 
   ng install firebase@angular/fire
 ```
 
+## Create your components
+
+```
+  ng generate component pages/home
+  ng generate component pages/auth/login
+  ng generate component pages/auth/signup
+  ng generate component components/header
+```
+
+## Add the apropiated routes in `app-routing.module.ts`
+
+```
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+];
+```
+
+## Navigation Bar
+
+On your header component add a mat toolbar, you can pick primary, accent or warn color.
+
+```
+<mat-toolbar color="accent">
+  Authentication Example
+  <button mat-button routerLink="login">
+    Log in
+    <mat-icon>login</mat-icon>
+  </button>
+</mat-toolbar>
+```
+
+With some styles to move the login to the right
+
+```
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+```
+
+## Add the navbar to the app `app.component.html`
+
+```
+<body>
+  <header>
+    <app-header></app-header>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</body>
+```
+
+Lets style it so the navbar stays on top
+
+```
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: aliceblue;
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+```
+
+I give it a background to test its working
+
+## Log in form
+
+import `FormsModule` into `app.module.ts`
+
+```
+import { ReactiveFormsModule } from '@angular/forms';
+```
+
+go to your `login.component.ts` and add right over the constructor, the form controlls
+
+```
+import { FormControl, FormGroup } from '@angular/forms';
+```
+
+```
+  loginForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+```
+
 # FirebaseAuthentication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.

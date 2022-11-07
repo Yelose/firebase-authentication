@@ -1,0 +1,27 @@
+<body>
+  <div class="mat-elevation-z3">
+    <h1>Log in</h1>
+    <form>
+      <mat-form-field appearance="outline">
+        <mat-label>email adress</mat-label>
+        <input
+          matInput
+          placeholder="enter your e-mail"
+          formControlName="email"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <input
+          matInput
+          placeholder="enter your password"
+          formControlName="password"
+          type="password"
+        />
+      </mat-form-field>
+      <button mat-raised-button color="primary">Log in</button>
+      <span>I don't have an account, <a routerLink="/signup">Sign Up</a></span>
+      <span>I forgot my password, <a href="">Restore Password</a></span>
+    </form>
+  </div>
+</body>
