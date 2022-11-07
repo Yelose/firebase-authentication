@@ -3,6 +3,7 @@ import {
   Auth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  authState,
 } from '@angular/fire/auth';
 import { from } from 'rxjs';
 
@@ -10,6 +11,8 @@ import { from } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
+  currentUser$ = authState(this.auth);
+
   constructor(private auth: Auth) {}
 
   login(username: any, password: any) {
