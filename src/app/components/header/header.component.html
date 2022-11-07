@@ -1,12 +1,13 @@
-<mat-toolbar color="accent">
+<mat-toolbar color="primary">
   Authentication Example
 
   <ng-container
     *ngIf="authService.currentUser$ | async as user; else loginButton"
   >
-    <button mat-button routerLink="logout" (click)="logout()">
-      Log out
-      <mat-icon>login</mat-icon>
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+      {{ user.displayName }}
+      <mat-icon>expand_more</mat-icon>
     </button>
   </ng-container>
 
@@ -17,3 +18,6 @@
     </button>
   </ng-template>
 </mat-toolbar>
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item (click)="logout()">Log out</button>
+</mat-menu>
