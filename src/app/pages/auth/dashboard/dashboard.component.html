@@ -1,0 +1,5 @@
+<div class="main-container">
+  <h1 *ngIf="user$ | async as user">
+    Welcome to our app, {{ user.displayName }}!
+  </h1>
+</div>

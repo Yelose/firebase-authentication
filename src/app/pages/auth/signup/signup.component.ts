@@ -81,7 +81,7 @@ export class SignupComponent implements OnInit {
         })
       )
       .subscribe(() => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/dashboard']);
       });
   }
 }

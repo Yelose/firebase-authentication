@@ -1,0 +1,33 @@
+body {
+  background-image: url("/assets/img/code-fondo-med.jpg");
+  background-position: left;
+  background-size: cover;
+  > main {
+    gap: 3vh;
+    > h1 {
+      margin: 0;
+    }
+    > section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3vh;
+      width: 100%;
+      > a {
+        > button {
+          img {
+            width: 30px;
+          }
+        }
+      }
+      iframe {
+        width: 50%;
+        height: calc(50vw * 0.54);
+        max-width: 560px;
+        max-height: 315px;
+        min-width: 350px;
+        min-height: 200px;
+      }
+    }
+  }
+}

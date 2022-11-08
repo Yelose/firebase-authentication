@@ -1,3 +1,29 @@
-<h1 *ngIf="user$ | async as user">
-  Welcome to our app, {{ user.displayName }}!
-</h1>
+<body>
+  <main class="main-container">
+    <h1>Authentication example</h1>
+    <h2>Login and register with Angular and Firebase</h2>
+    <section>
+      <div>
+        <img src="/assets/img/angular.png" alt="Angular" />
+        <img src="/assets/img/firebase.png" alt="Angular" />
+      </div>
+    </section>
+    <section>
+      <p>To check the code, you have access to my repository</p>
+      <a href="https://github.com/Yelose/firebase-authentication">
+        <button mat-raised-button>
+          <img src="/assets/img/github.png" alt="github repository link" />
+        </button>
+      </a>
+      <p>Made by Marina González Suárez</p>
+      <p>I followed the tutorial by Zoaib Khan</p>
+      <iframe
+        src="https://www.youtube.com/embed/C1F2pJzq5xQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </section>
+  </main>
+</body>

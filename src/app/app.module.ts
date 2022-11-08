@@ -17,6 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { RecoverComponent } from './pages/auth/recover/recover.component';
+import { DashboardComponent } from './pages/auth/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RecoverComponent } from './pages/auth/recover/recover.component';
     LoginComponent,
     SignupComponent,
     RecoverComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
