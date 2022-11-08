@@ -1,5 +1,7 @@
 # FIREBASE AUTHENTICATION PROJECT
 
+<img src="https://github.com/Yelose/Yelose/blob/main/img/login.gif?raw=true" width="100%">
+
 ## Clone your repository into the folder you want the project to be.
 
 ### This example is made with Visual Studio Code
