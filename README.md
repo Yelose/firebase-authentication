@@ -71,7 +71,7 @@ The first line will redirect you so you can fill your email and password and go 
 
 ```
   firebase login
-  ng install firebase@angular/fire
+  npm install firebase@angular/fire
 ```
 
 ## Create your components
